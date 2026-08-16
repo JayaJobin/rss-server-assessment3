@@ -193,9 +193,17 @@ img, svg {
 .btn-outline[aria-pressed="true"] {
   border-color: var(--accent-strong);
   border-width: 2px;
-  background: color-mix(in srgb, var(--accent-strong) 12%, transparent);
-  color: var(--accent-strong);
+  background: var(--accent-strong);
+  color: #fff;
   font-weight: 700;
+}
+
+/* In dark theme, --accent-strong is a light mint (#4fd6c3), so solid-fill
+   buttons need dark text instead of white to keep sufficient contrast. */
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .btn-outline[aria-pressed="true"] {
+  color: var(--ink-900);
 }
 .page-header {
   padding: 56px 0 32px;

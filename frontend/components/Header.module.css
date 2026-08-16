@@ -5,8 +5,8 @@
 }
 
 .titleBar {
-  background: var(--header-bg);
-  color: var(--header-text);
+  background: var(--ink-900);
+  color: #ffffff;
   border-bottom: 2px solid var(--signal-amber);
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -14,9 +14,10 @@
 .assessmentTitle {
   margin: 0;
   padding: 6px 0;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   font-family: var(--font-display);
   text-align: center;
+  color: #ffffff;
 }

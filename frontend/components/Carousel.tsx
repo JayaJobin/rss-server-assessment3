@@ -80,7 +80,7 @@ export default function Carousel({ posts, intervalMs = 5000 }: CarouselProps) {
       <div className={styles.viewport}>
         <button
           type="button"
-          className={`${styles.arrow} ${styles.arrowPrev}`}
+          className={styles.arrow}
           onClick={goPrev}
           aria-label="Previous featured post"
         >
@@ -102,7 +102,7 @@ export default function Carousel({ posts, intervalMs = 5000 }: CarouselProps) {
 
         <button
           type="button"
-          className={`${styles.arrow} ${styles.arrowNext}`}
+          className={styles.arrow}
           onClick={goNext}
           aria-label="Next featured post"
         >
