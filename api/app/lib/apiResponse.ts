@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 import { ZodError } from 'zod';
+import { trace, SpanStatusCode } from '@opentelemetry/api';
 import { corsHeaders } from './cors';
+
+const tracer = trace.getTracer('rss-server-api');
 
 export function jsonOk<T>(data: T, status = 200) {
   return NextResponse.json(data, { status, headers: corsHeaders });
@@ -22,16 +25,28 @@ export function zodErrorResponse(error: ZodError) {
   );
 }
 
-export async function withErrorHandling(
-  handler: () => Promise<NextResponse>
-): Promise<NextResponse> {
-  try {
-    return await handler();
-  } catch (error) {
-    if (error instanceof ZodError) {
-      return zodErrorResponse(error);
-    }
-    console.error(error);
-    return jsonError('Server error', 500);
-  }
+export function withErrorHandling(spanName = 'api.request') {
+  return async (handler: () => Promise<NextResponse>): Promise<NextResponse> => {
+    return tracer.startActiveSpan(spanName, async (span) => {
+      try {
+        const response = await handler();
+        span.setAttribute('http.status_code', response.status);
+        if (response.status >= 400) {
+          span.setStatus({ code: SpanStatusCode.ERROR, message: `HTTP ${response.status}` });
+        }
+        return response;
+      } catch (error) {
+        span.recordException(error as Error);
+        span.setStatus({ code: SpanStatusCode.ERROR, message: (error as Error).message });
+
+        if (error instanceof ZodError) {
+          return zodErrorResponse(error);
+        }
+        console.error(error);
+        return jsonError('Server error', 500);
+      } finally {
+        span.end();
+      }
+    });
+  };
 }

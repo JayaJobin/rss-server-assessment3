@@ -6,7 +6,7 @@ export const OPTIONS = corsPreflight;
 
 export async function GET() {
   await incrementRequestCount();
-  return withErrorHandling(async () => {
+  return withErrorHandling('count.GET')(async () => {
     const count = await getRequestCount();
     return jsonOk({ count });
   });

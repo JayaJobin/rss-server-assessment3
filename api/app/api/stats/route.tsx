@@ -9,7 +9,7 @@ import { corsPreflight } from '@/app/lib/cors';
 export const OPTIONS = corsPreflight;
 
 export async function GET() {
-  return withErrorHandling(async () => {
+  return withErrorHandling('stats.GET')(async () => {
     const [
       totalFeedSources,
       totalPosts,
