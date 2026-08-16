@@ -194,6 +194,44 @@ match on the seeded names from `/api/simulate`, e.g. "Campus
 Announcements"). Requests that don't match a known feed are still logged
 (for total/unique-client counts) with `feedSourceId: null`.
 
+### Distributed tracing (OpenTelemetry, Jaeger, Zipkin, Prometheus)
+
+Alongside the database-backed metrics above, the API is instrumented
+with OpenTelemetry so individual requests can be traced end-to-end, not
+just counted:
+
+- **`api/instrumentation.ts`** registers the OTel SDK for the api
+  service via `@vercel/otel`, under the service name `rss-server-api`.
+- **`app/lib/apiResponse.ts`** wraps every route handler that uses
+  `withErrorHandling(...)` in an OpenTelemetry span, named after the
+  operation (e.g. `posts.GET`, `feedsources.DELETE`, `stats.GET`). The
+  span records the resulting HTTP status code and, on error, records the
+  exception and marks the span as failed, so a failing request is
+  visible as an errored span, not just a log line. All 15 CRUD/reporting
+  route handlers across `posts`, `feedsources`, `authors`, `stats`,
+  `count` and `simulate` are covered this way automatically, without each
+  route needing its own tracing boilerplate.
+- **`docker-compose.yml`** adds four extra services alongside the app:
+  `jaegertracing` (trace UI, port 16686), `zipkin-all-in-one` (trace UI,
+  port 9411), `otel-collector` (receives OTLP data from the api service
+  and fans it out), and `prometheus` (scrapes the collector's metrics,
+  port 9090). The api service is configured with
+  `OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4318` so every span
+  is sent to the collector automatically.
+- **`otel-collector-config.yaml`** configures the collector to receive
+  OTLP traces/metrics and export traces to both Jaeger and Zipkin
+  simultaneously (so either UI can be used to inspect the same data),
+  and metrics to Prometheus.
+- **`prometheus.yaml`** scrapes the collector's own Prometheus endpoints
+  (`8888`, `8889`) every 10 seconds, e.g. `otelcol_exporter_sent_spans`
+  shows how many spans have been exported to each backend.
+
+To see it working: hit any API endpoint (or use the dashboard's
+"Generate simulated traffic" button), then open
+`http://<host>:16686` (Jaeger) or `http://<host>:9411` (Zipkin) and
+search for service `rss-server-api`. Each request shows up as a trace
+with its span name, duration, and status.
+
 ### Dashboard (`/dashboard`)
 
 Client-rendered page that polls `/api/stats` and `/api/health` every 10

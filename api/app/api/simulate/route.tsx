@@ -39,7 +39,7 @@ function daysAgo(days: number): Date {
 
 export async function POST(request: NextRequest) {
   await incrementRequestCount();
-  return withErrorHandling(async () => {
+  return withErrorHandling('simulate.POST')(async () => {
     const body = await request.json().catch(() => ({}));
     const postCount = Math.min(Math.max(Number(body.posts) || 20, 1), 200);
     const requestLogCount = Math.min(Math.max(Number(body.requestLogs) || 60, 1), 2000);

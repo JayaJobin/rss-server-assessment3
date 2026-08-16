@@ -9,7 +9,7 @@ export const OPTIONS = corsPreflight;
 
 export async function GET(request: NextRequest) {
   await incrementRequestCount();
-  return withErrorHandling(async () => {
+  return withErrorHandling('authors.GET')(async () => {
     const rawId = request.nextUrl.searchParams.get('id');
     if (rawId) {
       const id = idParamSchema.parse(rawId);
@@ -24,7 +24,7 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   await incrementRequestCount();
-  return withErrorHandling(async () => {
+  return withErrorHandling('authors.POST')(async () => {
     const body = authorCreateSchema.parse(await request.json());
     try {
       const newAuthor = await authorRepository.create(body);
@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
 
 export async function PATCH(request: NextRequest) {
   await incrementRequestCount();
-  return withErrorHandling(async () => {
+  return withErrorHandling('authors.PATCH')(async () => {
     const rawId = request.nextUrl.searchParams.get('id');
     if (!rawId) return jsonError('Missing id', 400);
     const id = idParamSchema.parse(rawId);
@@ -55,7 +55,7 @@ export async function PATCH(request: NextRequest) {
 
 export async function DELETE(request: NextRequest) {
   await incrementRequestCount();
-  return withErrorHandling(async () => {
+  return withErrorHandling('authors.DELETE')(async () => {
     const rawId = request.nextUrl.searchParams.get('id');
     if (!rawId) return jsonError('Missing id', 400);
     const id = idParamSchema.parse(rawId);
