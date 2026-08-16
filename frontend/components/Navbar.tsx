@@ -17,6 +17,7 @@ const LINKS: NavLink[] = [
   { href: "/", label: "Home" },
   { href: "/feeds", label: "Feeds" },
   { href: "/rss-client", label: "RSS Client" },
+  { href: "/dashboard", label: "Dashboard" },
   { href: "/about", label: "About" },
   { href: "/settings", label: "Settings" },
 ];
