@@ -1,5 +1,13 @@
 # RSS Server — Frontend
 
+> **Note:** This README describes the frontend as it stood for **Assessment 1**.
+> The project has since grown into a full-stack app across Assessments 2 and 3
+> (live backend, database, dashboard, observability, testing). For the
+> current, up-to-date project overview, see the **root [README.md](../README.md)**.
+> This file is kept as-is below for historical reference on how the original
+> Assessment 1 frontend rubric criteria were met.
+
+
 CSE5006 Assessment 1: a usability-focused frontend for an RSS Server that
 will eventually feed content into an LMS. This assessment is frontend
 only — sample blog-style content stands in for a live feed until the

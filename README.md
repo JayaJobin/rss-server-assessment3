@@ -159,6 +159,7 @@ Backend and integration work for Assessment 2 was developed on feature/assessmen
 - Post.author is a free-text display name separate from the optional Post.authorId relationship — this was a deliberate choice to support posts from feeds without a registered author profile, but it means the two can technically disagree if not kept in sync manually.
 - Foreign keys (feedSourceId, authorId) are nullable to allow posts to be created without a linked feed/author; a stricter schema could enforce these as required once all data sources are guaranteed to supply them.
 - The production Docker image installs sequelize-cli as a runtime dependency so migrations can run on container startup; a larger-scale deployment might instead run migrations as a separate one-off job/step rather than on every container start.
+- `docker-compose.yml` bakes a specific EC2 public IP into `NEXT_PUBLIC_API_URL` as a build arg, since that value has to be known at Next.js build time for browser-side fetches. This works for the deployed instance this project currently runs on, but is not portable out of the box — running the stack against a different host requires updating that one line (or overriding it via `docker-compose build --build-arg NEXT_PUBLIC_API_URL=http://<new-host>:4000 frontend`) before rebuilding. A more portable setup would resolve this at runtime (e.g. a same-origin API proxy) rather than baking a fixed URL in at build time; that refactor was out of scope for this iteration.
 
 ---
 
