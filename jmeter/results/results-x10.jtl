@@ -1,0 +1,201 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1786864491994,48,GET /api/health,200,OK,RSS Clients 1-1,text,true,,464,150,1,1,http://localhost:4000/api/health,42,0,30
+1786864492043,22,GET /api/rss,200,OK,RSS Clients 1-1,text,true,,22744,147,1,1,http://localhost:4000/api/rss,22,0,1
+1786864492065,29,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-1,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,28,0,1
+1786864492094,8,GET /api/stats,200,OK,RSS Clients 1-1,text,true,,1681,149,1,1,http://localhost:4000/api/stats,8,0,1
+1786864492103,4,GET /api/health,200,OK,RSS Clients 1-1,text,true,,464,150,1,1,http://localhost:4000/api/health,4,0,0
+1786864492108,25,GET /api/rss,200,OK,RSS Clients 1-1,text,true,,22744,147,1,1,http://localhost:4000/api/rss,25,0,0
+1786864492134,28,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-1,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,28,0,0
+1786864492163,7,GET /api/stats,200,OK,RSS Clients 1-1,text,true,,1681,149,1,1,http://localhost:4000/api/stats,7,0,1
+1786864492171,4,GET /api/health,200,OK,RSS Clients 1-1,text,true,,464,150,1,1,http://localhost:4000/api/health,4,0,1
+1786864492175,22,GET /api/rss,200,OK,RSS Clients 1-1,text,true,,22744,147,1,1,http://localhost:4000/api/rss,22,0,1
+1786864492198,29,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-1,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,29,0,1
+1786864492228,12,GET /api/stats,200,OK,RSS Clients 1-1,text,true,,1681,149,1,1,http://localhost:4000/api/stats,12,0,1
+1786864492240,7,GET /api/health,200,OK,RSS Clients 1-1,text,true,,464,150,1,1,http://localhost:4000/api/health,7,0,1
+1786864492248,24,GET /api/rss,200,OK,RSS Clients 1-1,text,true,,22744,147,1,1,http://localhost:4000/api/rss,23,0,0
+1786864492272,28,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-1,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,28,0,1
+1786864492301,9,GET /api/stats,200,OK,RSS Clients 1-1,text,true,,1681,149,1,1,http://localhost:4000/api/stats,9,0,1
+1786864492310,4,GET /api/health,200,OK,RSS Clients 1-1,text,true,,464,150,1,1,http://localhost:4000/api/health,4,0,1
+1786864492314,21,GET /api/rss,200,OK,RSS Clients 1-1,text,true,,22744,147,1,1,http://localhost:4000/api/rss,21,0,1
+1786864492336,29,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-1,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,29,0,0
+1786864492365,8,GET /api/stats,200,OK,RSS Clients 1-1,text,true,,1682,149,1,1,http://localhost:4000/api/stats,8,0,1
+1786864492390,4,GET /api/health,200,OK,RSS Clients 1-2,text,true,,464,150,1,1,http://localhost:4000/api/health,4,0,0
+1786864492394,22,GET /api/rss,200,OK,RSS Clients 1-2,text,true,,22744,147,1,1,http://localhost:4000/api/rss,21,0,1
+1786864492416,29,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-2,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,29,0,1
+1786864492445,7,GET /api/stats,200,OK,RSS Clients 1-2,text,true,,1719,149,1,1,http://localhost:4000/api/stats,7,0,1
+1786864492453,4,GET /api/health,200,OK,RSS Clients 1-2,text,true,,464,150,1,1,http://localhost:4000/api/health,4,0,1
+1786864492458,20,GET /api/rss,200,OK,RSS Clients 1-2,text,true,,22744,147,1,1,http://localhost:4000/api/rss,20,0,1
+1786864492479,35,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-2,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,34,0,0
+1786864492514,8,GET /api/stats,200,OK,RSS Clients 1-2,text,true,,1719,149,1,1,http://localhost:4000/api/stats,7,0,1
+1786864492522,3,GET /api/health,200,OK,RSS Clients 1-2,text,true,,464,150,1,1,http://localhost:4000/api/health,3,0,1
+1786864492526,24,GET /api/rss,200,OK,RSS Clients 1-2,text,true,,22744,147,1,1,http://localhost:4000/api/rss,24,0,0
+1786864492550,29,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-2,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,29,0,1
+1786864492580,9,GET /api/stats,200,OK,RSS Clients 1-2,text,true,,1719,149,1,1,http://localhost:4000/api/stats,9,0,1
+1786864492590,2,GET /api/health,200,OK,RSS Clients 1-2,text,true,,464,150,1,1,http://localhost:4000/api/health,2,0,0
+1786864492593,23,GET /api/rss,200,OK,RSS Clients 1-2,text,true,,22744,147,1,1,http://localhost:4000/api/rss,22,0,1
+1786864492616,34,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-2,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,33,0,1
+1786864492651,7,GET /api/stats,200,OK,RSS Clients 1-2,text,true,,1719,149,1,1,http://localhost:4000/api/stats,7,0,0
+1786864492660,4,GET /api/health,200,OK,RSS Clients 1-2,text,true,,464,150,1,1,http://localhost:4000/api/health,4,0,0
+1786864492664,22,GET /api/rss,200,OK,RSS Clients 1-2,text,true,,22744,147,1,1,http://localhost:4000/api/rss,22,0,1
+1786864492687,29,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-2,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,29,0,0
+1786864492716,7,GET /api/stats,200,OK,RSS Clients 1-2,text,true,,1720,149,1,1,http://localhost:4000/api/stats,7,0,1
+1786864492880,4,GET /api/health,200,OK,RSS Clients 1-3,text,true,,464,150,1,1,http://localhost:4000/api/health,4,0,1
+1786864492885,23,GET /api/rss,200,OK,RSS Clients 1-3,text,true,,22744,147,1,1,http://localhost:4000/api/rss,22,0,0
+1786864492908,29,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-3,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,29,0,1
+1786864492938,7,GET /api/stats,200,OK,RSS Clients 1-3,text,true,,1758,149,1,1,http://localhost:4000/api/stats,7,0,1
+1786864492946,3,GET /api/health,200,OK,RSS Clients 1-3,text,true,,464,150,1,1,http://localhost:4000/api/health,3,0,1
+1786864492949,21,GET /api/rss,200,OK,RSS Clients 1-3,text,true,,22744,147,1,1,http://localhost:4000/api/rss,20,0,1
+1786864492970,31,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-3,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,30,0,1
+1786864493001,8,GET /api/stats,200,OK,RSS Clients 1-3,text,true,,1758,149,1,1,http://localhost:4000/api/stats,7,0,1
+1786864493009,3,GET /api/health,200,OK,RSS Clients 1-3,text,true,,464,150,1,1,http://localhost:4000/api/health,2,0,1
+1786864493012,20,GET /api/rss,200,OK,RSS Clients 1-3,text,true,,22744,147,1,1,http://localhost:4000/api/rss,20,0,0
+1786864493033,29,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-3,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,28,0,0
+1786864493062,8,GET /api/stats,200,OK,RSS Clients 1-3,text,true,,1758,149,1,1,http://localhost:4000/api/stats,8,0,0
+1786864493071,4,GET /api/health,200,OK,RSS Clients 1-3,text,true,,464,150,1,1,http://localhost:4000/api/health,4,0,1
+1786864493076,20,GET /api/rss,200,OK,RSS Clients 1-3,text,true,,22744,147,1,1,http://localhost:4000/api/rss,20,0,1
+1786864493096,28,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-3,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,27,0,1
+1786864493124,11,GET /api/stats,200,OK,RSS Clients 1-3,text,true,,1758,149,1,1,http://localhost:4000/api/stats,11,0,1
+1786864493135,4,GET /api/health,200,OK,RSS Clients 1-3,text,true,,464,150,1,1,http://localhost:4000/api/health,4,0,1
+1786864493139,21,GET /api/rss,200,OK,RSS Clients 1-3,text,true,,22744,147,1,1,http://localhost:4000/api/rss,21,0,1
+1786864493161,28,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-3,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,28,0,1
+1786864493189,10,GET /api/stats,200,OK,RSS Clients 1-3,text,true,,1759,149,1,1,http://localhost:4000/api/stats,10,0,1
+1786864493381,4,GET /api/health,200,OK,RSS Clients 1-4,text,true,,464,150,1,1,http://localhost:4000/api/health,4,0,0
+1786864493390,21,GET /api/rss,200,OK,RSS Clients 1-4,text,true,,22744,147,1,1,http://localhost:4000/api/rss,21,0,1
+1786864493411,41,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-4,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,41,0,1
+1786864493453,10,GET /api/stats,200,OK,RSS Clients 1-4,text,true,,1796,149,1,1,http://localhost:4000/api/stats,9,0,0
+1786864493463,3,GET /api/health,200,OK,RSS Clients 1-4,text,true,,464,150,1,1,http://localhost:4000/api/health,3,0,1
+1786864493467,24,GET /api/rss,200,OK,RSS Clients 1-4,text,true,,22744,147,1,1,http://localhost:4000/api/rss,23,0,0
+1786864493491,27,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-4,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,27,0,1
+1786864493519,7,GET /api/stats,200,OK,RSS Clients 1-4,text,true,,1797,149,1,1,http://localhost:4000/api/stats,7,0,0
+1786864493527,2,GET /api/health,200,OK,RSS Clients 1-4,text,true,,464,150,1,1,http://localhost:4000/api/health,2,0,0
+1786864493530,23,GET /api/rss,200,OK,RSS Clients 1-4,text,true,,22744,147,1,1,http://localhost:4000/api/rss,23,0,3
+1786864493554,27,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-4,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,27,0,0
+1786864493581,10,GET /api/stats,200,OK,RSS Clients 1-4,text,true,,1797,149,1,1,http://localhost:4000/api/stats,10,0,1
+1786864493592,2,GET /api/health,200,OK,RSS Clients 1-4,text,true,,464,150,1,1,http://localhost:4000/api/health,2,0,0
+1786864493594,22,GET /api/rss,200,OK,RSS Clients 1-4,text,true,,22744,147,1,1,http://localhost:4000/api/rss,22,0,1
+1786864493616,32,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-4,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,32,0,1
+1786864493649,12,GET /api/stats,200,OK,RSS Clients 1-4,text,true,,1797,149,1,1,http://localhost:4000/api/stats,11,0,1
+1786864493661,4,GET /api/health,200,OK,RSS Clients 1-4,text,true,,464,150,1,1,http://localhost:4000/api/health,4,0,1
+1786864493665,20,GET /api/rss,200,OK,RSS Clients 1-4,text,true,,22744,147,1,1,http://localhost:4000/api/rss,20,0,0
+1786864493685,31,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-4,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,31,0,1
+1786864493717,9,GET /api/stats,200,OK,RSS Clients 1-4,text,true,,1798,149,1,1,http://localhost:4000/api/stats,9,0,1
+1786864493884,4,GET /api/health,200,OK,RSS Clients 1-5,text,true,,464,150,1,1,http://localhost:4000/api/health,4,0,1
+1786864493888,23,GET /api/rss,200,OK,RSS Clients 1-5,text,true,,22744,147,1,1,http://localhost:4000/api/rss,22,0,1
+1786864493911,26,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-5,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,26,0,1
+1786864493938,11,GET /api/stats,200,OK,RSS Clients 1-5,text,true,,1835,149,1,1,http://localhost:4000/api/stats,11,0,1
+1786864493949,3,GET /api/health,200,OK,RSS Clients 1-5,text,true,,464,150,1,1,http://localhost:4000/api/health,3,0,1
+1786864493953,20,GET /api/rss,200,OK,RSS Clients 1-5,text,true,,22744,147,1,1,http://localhost:4000/api/rss,19,0,1
+1786864493973,26,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-5,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,25,0,1
+1786864493999,9,GET /api/stats,200,OK,RSS Clients 1-5,text,true,,1835,149,1,1,http://localhost:4000/api/stats,9,0,1
+1786864494009,3,GET /api/health,200,OK,RSS Clients 1-5,text,true,,464,150,1,1,http://localhost:4000/api/health,3,0,1
+1786864494013,22,GET /api/rss,200,OK,RSS Clients 1-5,text,true,,22744,147,1,1,http://localhost:4000/api/rss,22,0,1
+1786864494035,34,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-5,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,34,0,1
+1786864494069,6,GET /api/stats,200,OK,RSS Clients 1-5,text,true,,1835,149,1,1,http://localhost:4000/api/stats,6,0,1
+1786864494076,3,GET /api/health,200,OK,RSS Clients 1-5,text,true,,464,150,1,1,http://localhost:4000/api/health,3,0,0
+1786864494079,21,GET /api/rss,200,OK,RSS Clients 1-5,text,true,,22744,147,1,1,http://localhost:4000/api/rss,21,0,0
+1786864494101,28,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-5,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,28,0,1
+1786864494130,10,GET /api/stats,200,OK,RSS Clients 1-5,text,true,,1835,149,1,1,http://localhost:4000/api/stats,10,0,0
+1786864494141,3,GET /api/health,200,OK,RSS Clients 1-5,text,true,,464,150,1,1,http://localhost:4000/api/health,3,0,0
+1786864494144,21,GET /api/rss,200,OK,RSS Clients 1-5,text,true,,22744,147,1,1,http://localhost:4000/api/rss,21,0,0
+1786864494165,68,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-5,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,68,0,1
+1786864494234,7,GET /api/stats,200,OK,RSS Clients 1-5,text,true,,1836,149,1,1,http://localhost:4000/api/stats,7,0,0
+1786864494379,3,GET /api/health,200,OK,RSS Clients 1-6,text,true,,464,150,1,1,http://localhost:4000/api/health,3,0,1
+1786864494383,24,GET /api/rss,200,OK,RSS Clients 1-6,text,true,,22744,147,1,1,http://localhost:4000/api/rss,23,0,0
+1786864494407,30,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-6,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,30,0,1
+1786864494438,8,GET /api/stats,200,OK,RSS Clients 1-6,text,true,,1873,149,1,1,http://localhost:4000/api/stats,8,0,0
+1786864494447,3,GET /api/health,200,OK,RSS Clients 1-6,text,true,,464,150,1,1,http://localhost:4000/api/health,3,0,0
+1786864494451,23,GET /api/rss,200,OK,RSS Clients 1-6,text,true,,22744,147,1,1,http://localhost:4000/api/rss,23,0,1
+1786864494474,35,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-6,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,35,0,1
+1786864494510,8,GET /api/stats,200,OK,RSS Clients 1-6,text,true,,1873,149,1,1,http://localhost:4000/api/stats,8,0,0
+1786864494518,4,GET /api/health,200,OK,RSS Clients 1-6,text,true,,464,150,1,1,http://localhost:4000/api/health,4,0,1
+1786864494522,20,GET /api/rss,200,OK,RSS Clients 1-6,text,true,,22744,147,1,1,http://localhost:4000/api/rss,19,0,0
+1786864494542,27,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-6,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,26,0,1
+1786864494569,8,GET /api/stats,200,OK,RSS Clients 1-6,text,true,,1873,149,1,1,http://localhost:4000/api/stats,8,0,0
+1786864494577,3,GET /api/health,200,OK,RSS Clients 1-6,text,true,,464,150,1,1,http://localhost:4000/api/health,3,0,0
+1786864494580,23,GET /api/rss,200,OK,RSS Clients 1-6,text,true,,22744,147,1,1,http://localhost:4000/api/rss,23,0,2
+1786864494603,29,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-6,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,28,0,1
+1786864494632,7,GET /api/stats,200,OK,RSS Clients 1-6,text,true,,1873,149,1,1,http://localhost:4000/api/stats,7,0,0
+1786864494640,3,GET /api/health,200,OK,RSS Clients 1-6,text,true,,464,150,1,1,http://localhost:4000/api/health,3,0,0
+1786864494643,21,GET /api/rss,200,OK,RSS Clients 1-6,text,true,,22744,147,1,1,http://localhost:4000/api/rss,21,0,0
+1786864494665,27,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-6,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,27,0,1
+1786864494692,7,GET /api/stats,200,OK,RSS Clients 1-6,text,true,,1874,149,1,1,http://localhost:4000/api/stats,7,0,1
+1786864494878,4,GET /api/health,200,OK,RSS Clients 1-7,text,true,,464,150,1,1,http://localhost:4000/api/health,4,0,1
+1786864494883,21,GET /api/rss,200,OK,RSS Clients 1-7,text,true,,22744,147,1,1,http://localhost:4000/api/rss,20,0,0
+1786864494904,27,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-7,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,27,0,1
+1786864494931,9,GET /api/stats,200,OK,RSS Clients 1-7,text,true,,1911,149,1,1,http://localhost:4000/api/stats,7,0,1
+1786864494940,4,GET /api/health,200,OK,RSS Clients 1-7,text,true,,464,150,1,1,http://localhost:4000/api/health,4,0,3
+1786864494945,22,GET /api/rss,200,OK,RSS Clients 1-7,text,true,,22744,147,1,1,http://localhost:4000/api/rss,21,0,2
+1786864494967,32,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-7,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,32,0,1
+1786864494999,12,GET /api/stats,200,OK,RSS Clients 1-7,text,true,,1911,149,1,1,http://localhost:4000/api/stats,11,0,1
+1786864495013,3,GET /api/health,200,OK,RSS Clients 1-7,text,true,,464,150,1,1,http://localhost:4000/api/health,2,0,0
+1786864495016,27,GET /api/rss,200,OK,RSS Clients 1-7,text,true,,22744,147,1,1,http://localhost:4000/api/rss,27,0,0
+1786864495043,34,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-7,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,34,0,1
+1786864495077,7,GET /api/stats,200,OK,RSS Clients 1-7,text,true,,1911,149,1,1,http://localhost:4000/api/stats,7,0,1
+1786864495085,3,GET /api/health,200,OK,RSS Clients 1-7,text,true,,464,150,1,1,http://localhost:4000/api/health,3,0,0
+1786864495088,21,GET /api/rss,200,OK,RSS Clients 1-7,text,true,,22744,147,1,1,http://localhost:4000/api/rss,21,0,1
+1786864495110,32,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-7,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,32,0,1
+1786864495143,10,GET /api/stats,200,OK,RSS Clients 1-7,text,true,,1911,149,1,1,http://localhost:4000/api/stats,9,0,0
+1786864495153,3,GET /api/health,200,OK,RSS Clients 1-7,text,true,,464,150,1,1,http://localhost:4000/api/health,3,0,1
+1786864495156,20,GET /api/rss,200,OK,RSS Clients 1-7,text,true,,22744,147,1,1,http://localhost:4000/api/rss,20,0,1
+1786864495177,26,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-7,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,26,0,0
+1786864495203,9,GET /api/stats,200,OK,RSS Clients 1-7,text,true,,1912,149,1,1,http://localhost:4000/api/stats,9,0,1
+1786864495378,3,GET /api/health,200,OK,RSS Clients 1-8,text,true,,464,150,1,1,http://localhost:4000/api/health,3,0,0
+1786864495382,21,GET /api/rss,200,OK,RSS Clients 1-8,text,true,,22744,147,1,1,http://localhost:4000/api/rss,21,0,0
+1786864495403,27,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-8,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,27,0,1
+1786864495430,7,GET /api/stats,200,OK,RSS Clients 1-8,text,true,,1949,149,1,1,http://localhost:4000/api/stats,7,0,1
+1786864495437,3,GET /api/health,200,OK,RSS Clients 1-8,text,true,,464,150,1,1,http://localhost:4000/api/health,2,0,0
+1786864495440,32,GET /api/rss,200,OK,RSS Clients 1-8,text,true,,22744,147,1,1,http://localhost:4000/api/rss,32,0,1
+1786864495472,27,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-8,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,26,0,0
+1786864495499,9,GET /api/stats,200,OK,RSS Clients 1-8,text,true,,1949,149,1,1,http://localhost:4000/api/stats,9,0,0
+1786864495508,3,GET /api/health,200,OK,RSS Clients 1-8,text,true,,464,150,1,1,http://localhost:4000/api/health,2,0,1
+1786864495511,20,GET /api/rss,200,OK,RSS Clients 1-8,text,true,,22744,147,1,1,http://localhost:4000/api/rss,20,0,0
+1786864495531,28,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-8,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,28,0,0
+1786864495559,8,GET /api/stats,200,OK,RSS Clients 1-8,text,true,,1949,149,1,1,http://localhost:4000/api/stats,8,0,1
+1786864495567,3,GET /api/health,200,OK,RSS Clients 1-8,text,true,,464,150,1,1,http://localhost:4000/api/health,2,0,1
+1786864495570,21,GET /api/rss,200,OK,RSS Clients 1-8,text,true,,22744,147,1,1,http://localhost:4000/api/rss,21,0,0
+1786864495592,28,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-8,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,28,0,1
+1786864495620,8,GET /api/stats,200,OK,RSS Clients 1-8,text,true,,1949,149,1,1,http://localhost:4000/api/stats,8,0,0
+1786864495628,3,GET /api/health,200,OK,RSS Clients 1-8,text,true,,464,150,1,1,http://localhost:4000/api/health,3,0,0
+1786864495632,19,GET /api/rss,200,OK,RSS Clients 1-8,text,true,,22744,147,1,1,http://localhost:4000/api/rss,19,0,0
+1786864495652,26,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-8,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,26,0,0
+1786864495679,7,GET /api/stats,200,OK,RSS Clients 1-8,text,true,,1950,149,1,1,http://localhost:4000/api/stats,7,0,0
+1786864495879,5,GET /api/health,200,OK,RSS Clients 1-9,text,true,,464,150,1,1,http://localhost:4000/api/health,5,0,1
+1786864495884,20,GET /api/rss,200,OK,RSS Clients 1-9,text,true,,22744,147,1,1,http://localhost:4000/api/rss,20,0,0
+1786864495904,27,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-9,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,27,0,1
+1786864495931,8,GET /api/stats,200,OK,RSS Clients 1-9,text,true,,1987,149,1,1,http://localhost:4000/api/stats,8,0,1
+1786864495940,3,GET /api/health,200,OK,RSS Clients 1-9,text,true,,464,150,1,1,http://localhost:4000/api/health,2,0,0
+1786864495943,20,GET /api/rss,200,OK,RSS Clients 1-9,text,true,,22744,147,1,1,http://localhost:4000/api/rss,20,0,0
+1786864495964,30,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-9,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,30,0,0
+1786864495995,7,GET /api/stats,200,OK,RSS Clients 1-9,text,true,,1987,149,1,1,http://localhost:4000/api/stats,7,0,1
+1786864496003,2,GET /api/health,200,OK,RSS Clients 1-9,text,true,,464,150,1,1,http://localhost:4000/api/health,2,0,0
+1786864496005,24,GET /api/rss,200,OK,RSS Clients 1-9,text,true,,22744,147,1,1,http://localhost:4000/api/rss,24,0,0
+1786864496030,35,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-9,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,35,0,0
+1786864496065,8,GET /api/stats,200,OK,RSS Clients 1-9,text,true,,1987,149,1,1,http://localhost:4000/api/stats,8,0,1
+1786864496074,3,GET /api/health,200,OK,RSS Clients 1-9,text,true,,464,150,1,1,http://localhost:4000/api/health,3,0,0
+1786864496077,20,GET /api/rss,200,OK,RSS Clients 1-9,text,true,,22744,147,1,1,http://localhost:4000/api/rss,20,0,1
+1786864496098,30,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-9,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,30,0,0
+1786864496128,8,GET /api/stats,200,OK,RSS Clients 1-9,text,true,,1987,149,1,1,http://localhost:4000/api/stats,7,0,1
+1786864496136,2,GET /api/health,200,OK,RSS Clients 1-9,text,true,,464,150,1,1,http://localhost:4000/api/health,2,0,0
+1786864496138,20,GET /api/rss,200,OK,RSS Clients 1-9,text,true,,22744,147,1,1,http://localhost:4000/api/rss,20,0,1
+1786864496159,27,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-9,text,true,,6694,170,1,1,http://localhost:4000/api/rss/Campus%20Announcements,27,0,0
+1786864496186,9,GET /api/stats,200,OK,RSS Clients 1-9,text,true,,1988,149,1,1,http://localhost:4000/api/stats,9,0,1
+1786864496378,4,GET /api/health,200,OK,RSS Clients 1-10,text,true,,464,151,1,1,http://localhost:4000/api/health,4,0,1
+1786864496382,20,GET /api/rss,200,OK,RSS Clients 1-10,text,true,,22744,148,1,1,http://localhost:4000/api/rss,20,0,1
+1786864496403,32,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-10,text,true,,6694,171,1,1,http://localhost:4000/api/rss/Campus%20Announcements,32,0,1
+1786864496436,14,GET /api/stats,200,OK,RSS Clients 1-10,text,true,,2026,150,1,1,http://localhost:4000/api/stats,14,0,0
+1786864496451,3,GET /api/health,200,OK,RSS Clients 1-10,text,true,,464,151,1,1,http://localhost:4000/api/health,3,0,0
+1786864496454,20,GET /api/rss,200,OK,RSS Clients 1-10,text,true,,22744,148,1,1,http://localhost:4000/api/rss,20,0,1
+1786864496474,27,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-10,text,true,,6694,171,1,1,http://localhost:4000/api/rss/Campus%20Announcements,27,0,1
+1786864496502,7,GET /api/stats,200,OK,RSS Clients 1-10,text,true,,2026,150,1,1,http://localhost:4000/api/stats,7,0,0
+1786864496509,4,GET /api/health,200,OK,RSS Clients 1-10,text,true,,464,151,1,1,http://localhost:4000/api/health,4,0,1
+1786864496514,21,GET /api/rss,200,OK,RSS Clients 1-10,text,true,,22744,148,1,1,http://localhost:4000/api/rss,21,0,0
+1786864496535,25,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-10,text,true,,6694,171,1,1,http://localhost:4000/api/rss/Campus%20Announcements,25,0,0
+1786864496561,9,GET /api/stats,200,OK,RSS Clients 1-10,text,true,,2026,150,1,1,http://localhost:4000/api/stats,8,0,0
+1786864496571,4,GET /api/health,200,OK,RSS Clients 1-10,text,true,,464,151,1,1,http://localhost:4000/api/health,4,0,0
+1786864496575,21,GET /api/rss,200,OK,RSS Clients 1-10,text,true,,22744,148,1,1,http://localhost:4000/api/rss,20,0,1
+1786864496596,28,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-10,text,true,,6694,171,1,1,http://localhost:4000/api/rss/Campus%20Announcements,28,0,1
+1786864496624,8,GET /api/stats,200,OK,RSS Clients 1-10,text,true,,2026,150,1,1,http://localhost:4000/api/stats,8,0,1
+1786864496632,3,GET /api/health,200,OK,RSS Clients 1-10,text,true,,464,151,1,1,http://localhost:4000/api/health,3,0,1
+1786864496636,18,GET /api/rss,200,OK,RSS Clients 1-10,text,true,,22744,148,1,1,http://localhost:4000/api/rss,18,0,0
+1786864496655,26,GET /api/rss/Campus Announcements,200,OK,RSS Clients 1-10,text,true,,6694,171,1,1,http://localhost:4000/api/rss/Campus%20Announcements,26,0,0
+1786864496681,8,GET /api/stats,200,OK,RSS Clients 1-10,text,true,,2027,150,1,1,http://localhost:4000/api/stats,7,0,1
