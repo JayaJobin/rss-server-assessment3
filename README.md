@@ -159,3 +159,64 @@ Backend and integration work for Assessment 2 was developed on feature/assessmen
 - Post.author is a free-text display name separate from the optional Post.authorId relationship — this was a deliberate choice to support posts from feeds without a registered author profile, but it means the two can technically disagree if not kept in sync manually.
 - Foreign keys (feedSourceId, authorId) are nullable to allow posts to be created without a linked feed/author; a stricter schema could enforce these as required once all data sources are guaranteed to supply them.
 - The production Docker image installs sequelize-cli as a runtime dependency so migrations can run on container startup; a larger-scale deployment might instead run migrations as a separate one-off job/step rather than on every container start.
+
+---
+
+## Assessment 3 — Data-driven web application and reporting
+
+Assessment 3 extends the Assessment 2 backend with a dashboard, per-feed/
+per-client observability, simulated data, and automated testing.
+
+### New database tables
+
+- **RequestLogs** — one row per RSS-feed request, storing `path`,
+  `method`, `clientId` and (when it maps to a known feed) `feedSourceId`.
+  Backs the "requests per feed" and "requests per client" metrics and the
+  unique-client count.
+- **FeedStatuses** — one row per feed source, storing its current
+  `status` (`ok` / `empty` / `error`), an optional `message`, and
+  `lastCheckedAt`. Updated every time that feed is fetched via
+  `/api/rss/[category]`, or via `/api/simulate`.
+
+### New/updated API endpoints
+
+| Method | Endpoint | Purpose |
+|---|---|---|
+| GET | /api/health | Heartbeat — returns 200 OK with status/uptime (unchanged from Assessment 2) |
+| GET | /api/stats | Extended: totalFeedSources, totalPosts, totalApiRequests, totalLoggedRequests, uniqueClientCount, requestsPerFeed[], requestsPerClient[], feedStatuses[] |
+| POST | /api/simulate | Generates simulated feed sources, authors, posts and request traffic, and deliberately marks one feed "empty" and one "error" so the dashboard has ok/empty/error states to demonstrate |
+| GET | /api/rss/[category] | Unchanged output, but now logs the request against the matching feed source and updates that feed's status (ok/empty) on every fetch |
+
+`/api/rss/[category]` resolves "which feed" a request belongs to by
+matching the category name against `FeedSource.name` (case-sensitive
+match on the seeded names from `/api/simulate`, e.g. "Campus
+Announcements"). Requests that don't match a known feed are still logged
+(for total/unique-client counts) with `feedSourceId: null`.
+
+### Dashboard (`/dashboard`)
+
+Client-rendered page that polls `/api/stats` and `/api/health` every 10
+seconds and shows: an API-health pill, five metric cards (total
+requests, logged requests, RSS feed count, total posts, unique clients),
+a requests-per-feed table, a requests-per-client table, and a feed status
+list with colour-coded OK/EMPTY/ERROR badges and messages. A "Generate
+simulated traffic" button calls `/api/simulate` directly from the UI for
+live demonstration.
+
+### Testing
+
+- **Playwright** (`tests/server.spec.ts`, `tests/client.spec.ts`) — see
+  [TESTING.md](./TESTING.md).
+- **JMeter** (`jmeter/load-test-plan.jmx`) — parameterised staged load
+  test (x1/x10/x100/x1000/x10000), see [TESTING.md](./TESTING.md).
+- **Lighthouse** — accessibility run against the frontend, see
+  [TESTING.md](./TESTING.md).
+
+### Running the new migrations
+
+```bash
+docker-compose exec api npx sequelize-cli db:migrate
+```
+
+(or rebuild the containers — the production image runs pending
+migrations on startup, per the Known Limitations note above).
