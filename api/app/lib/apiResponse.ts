@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { ZodError } from 'zod';
 import { trace, SpanStatusCode } from '@opentelemetry/api';
 import { corsHeaders } from './cors';
+import { logger } from './logger';
 
 const tracer = trace.getTracer('rss-server-api');
 
@@ -33,16 +34,19 @@ export function withErrorHandling(spanName = 'api.request') {
         span.setAttribute('http.status_code', response.status);
         if (response.status >= 400) {
           span.setStatus({ code: SpanStatusCode.ERROR, message: `HTTP ${response.status}` });
+          logger.warn({ spanName, statusCode: response.status }, 'Request completed with error status');
+        } else {
+          logger.info({ spanName, statusCode: response.status }, 'Request completed');
         }
         return response;
       } catch (error) {
         span.recordException(error as Error);
         span.setStatus({ code: SpanStatusCode.ERROR, message: (error as Error).message });
+        logger.error({ spanName, err: error }, 'Unhandled error in route handler');
 
         if (error instanceof ZodError) {
           return zodErrorResponse(error);
         }
-        console.error(error);
         return jsonError('Server error', 500);
       } finally {
         span.end();
