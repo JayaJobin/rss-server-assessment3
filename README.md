@@ -1,4 +1,4 @@
-# RSS Server — Assessment 2
+# RSS Server — Assessment 3: Data-Driven Dashboard and Reporting
 
 A containerised RSS Server backend built with Next.js, Sequelize, and SQLite, integrated with the Assessment 1 React frontend.
 
