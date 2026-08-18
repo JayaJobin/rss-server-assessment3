@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
+
 interface FeedStatusRow {
   feedSourceId: number | null;
   label: string;
@@ -32,6 +33,11 @@ export default function DashboardPage() {
   const [error, setError] = useState<string | null>(null);
   const [simulating, setSimulating] = useState(false);
   const [lastRefreshed, setLastRefreshed] = useState<Date | null>(null);
+  const [host, setHost] = useState("");
+
+  useEffect(() => {
+    setHost(window.location.hostname);
+  }, []);
 
   const loadStats = useCallback(async () => {
     try {
@@ -90,6 +96,8 @@ export default function DashboardPage() {
 
       {error && <div className={styles.alertError}>{error}</div>}
 
+
+
       <section className={styles.healthRow}>
         <StatusPill ok={healthOk} />
         {lastRefreshed && (
@@ -98,6 +106,27 @@ export default function DashboardPage() {
           </span>
         )}
       </section>
+
+      <section className={styles.panel}>
+        <h2>Observability tools</h2>
+        <p className={styles.empty}>
+          Distributed traces and metrics for this app are also viewable directly
+          in the underlying tools. Each link opens the relevant UI for this host.
+        </p>
+        <div className={styles.toolLinks}>
+          <a href={`http://${host}:16686`} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+            Jaeger (traces)
+          </a>
+          <a href={`http://${host}:9411/zipkin`} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+            Zipkin (traces)
+          </a>
+          <a href={`http://${host}:9090`} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+            Prometheus (metrics)
+          </a>
+        </div>
+      </section>
+
+      
 
       <section className={styles.metricGrid}>
         <MetricCard label="Total requests" value={stats?.totalApiRequests ?? "—"} />
