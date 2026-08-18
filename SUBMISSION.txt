@@ -1,9 +1,9 @@
-Assessment 2 — RSS Server Backend
+Assessment 3 — RSS Server: Data-Driven Dashboard and Reporting
 Student: Jaya Jobin
 Student ID: 22839039
 
-GitHub Repository (Assessment 2):
-https://github.com/JayaJobin/rss-server-assessment2
+GitHub Repository (Assessment 3):
+https://github.com/JayaJobin/rss-server-assessment3
 
 Live deployment (at time of recording):
-http://54.86.216.36:3000
+http://32.192.204.45:3000
