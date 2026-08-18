@@ -1,14 +1,9 @@
 import { test, expect } from '@playwright/test';
 
-// Server use case: CRUD lifecycle for a Feed Source via the RSS Server API.
-// This exercises Create, Read, Update and Delete directly against the
-// backend, independent of any UI, demonstrating the "server use case"
-// required by the Assessment 3 brief.
-
 const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:4000';
 
-test.describe('Server use case: Feed Source CRUD', () => {
-  let createdId: number;
+test.describe.serial('Server use case: Feed Source CRUD', () => {
+  let createdId: number | undefined;
   const uniqueUrl = `https://example.edu/feeds/playwright-${Date.now()}.xml`;
 
   test('health check returns 200 OK', async ({ request }) => {
@@ -38,6 +33,7 @@ test.describe('Server use case: Feed Source CRUD', () => {
   });
 
   test('updates the feed source', async ({ request }) => {
+    expect(createdId, 'createdId should be set by the earlier create/read step').toBeDefined();
     const res = await request.patch(`${API_BASE_URL}/api/feedsources?id=${createdId}`, {
       data: { name: 'Playwright Test Feed (updated)' },
     });
@@ -47,8 +43,10 @@ test.describe('Server use case: Feed Source CRUD', () => {
   });
 
   test('deletes the feed source', async ({ request }) => {
+    expect(createdId, 'createdId should be set by the earlier create/read step').toBeDefined();
     const res = await request.delete(`${API_BASE_URL}/api/feedsources?id=${createdId}`);
     expect(res.status()).toBe(204);
+    createdId = undefined;
   });
 
   test('stats endpoint reports observability metrics', async ({ request }) => {
@@ -59,5 +57,11 @@ test.describe('Server use case: Feed Source CRUD', () => {
     expect(body).toHaveProperty('totalApiRequests');
     expect(body).toHaveProperty('requestsPerFeed');
     expect(body).toHaveProperty('feedStatuses');
+  });
+
+  test.afterAll(async ({ request }) => {
+    if (createdId !== undefined) {
+      await request.delete(`${API_BASE_URL}/api/feedsources?id=${createdId}`).catch(() => {});
+    }
   });
 });
