@@ -8,15 +8,12 @@ import { jsonOk, withErrorHandling } from '@/app/lib/apiResponse';
 
 export const OPTIONS = corsPreflight;
 
-// Seed set of feed sources this simulation works with. One is deliberately
-// left with zero posts (demonstrates an "empty feed" warning) and one is
-// deliberately flagged as erroring (demonstrates an "error" indicator),
-// satisfying the assignment's requirement to show unusual/error states.
 const SEED_FEEDS = [
   { name: 'Campus Announcements', url: 'https://example.edu/feeds/announcements.xml' },
   { name: 'Module 4 Blog', url: 'https://example.edu/feeds/module-4.xml' },
   { name: 'Assessment Updates', url: 'https://example.edu/feeds/assessments.xml' },
-  { name: 'LMS Digest', url: 'https://example.edu/feeds/lms-digest.xml' }, // left empty on purpose
+  { name: 'LMS Digest', url: 'https://example.edu/feeds/lms-digest.xml' },
+  { name: 'External Partner Feed (Demo)', url: 'https://example.edu/feeds/external-partner-demo.xml' },
 ];
 
 const AUTHORS = [
@@ -44,23 +41,19 @@ export async function POST(request: NextRequest) {
     const postCount = Math.min(Math.max(Number(body.posts) || 20, 1), 200);
     const requestLogCount = Math.min(Math.max(Number(body.requestLogs) || 60, 1), 2000);
 
-    // 1. Ensure feed sources exist.
     const feedSources: FeedSource[] = [];
     for (const seed of SEED_FEEDS) {
       const [source] = await FeedSource.findOrCreate({ where: { url: seed.url }, defaults: seed });
       feedSources.push(source);
     }
 
-    // 2. Ensure authors exist.
     const authors: Author[] = [];
     for (const seed of AUTHORS) {
       const [author] = await Author.findOrCreate({ where: { email: seed.email }, defaults: seed });
       authors.push(author);
     }
 
-    // 3. Deliberately keep the last feed ("LMS Digest") empty, and spread
-    // posts across the rest, to demonstrate ok / empty / error states.
-    const postableFeeds = feedSources.slice(0, -1);
+    const postableFeeds = feedSources.slice(0, -2);
     const createdPosts: Post[] = [];
     for (let i = 0; i < postCount; i++) {
       const feed = randomFrom(postableFeeds);
@@ -81,7 +74,6 @@ export async function POST(request: NextRequest) {
       createdPosts.push(post);
     }
 
-    // 4. Simulate request traffic distributed across feeds and clients.
     for (let i = 0; i < requestLogCount; i++) {
       const feed = randomFrom(feedSources);
       const client = randomFrom(SAMPLE_CLIENTS);
@@ -94,8 +86,6 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // 5. Update feed status: ok for feeds with posts, empty for the one
-    // deliberately left without posts, error for one feed (simulated).
     for (const feed of feedSources) {
       const hasPosts = createdPosts.some((p) => p.feedSourceId === feed.id);
       await feedStatusRepository.upsert({
@@ -106,9 +96,7 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // Simulate one feed reporting an error state, so the dashboard has a
-    // visible error/warning indicator to demonstrate.
-    const errorFeed = feedSources[0];
+    const errorFeed = feedSources[feedSources.length - 1];
     await feedStatusRepository.upsert({
       feedSourceId: errorFeed.id,
       label: errorFeed.name,
