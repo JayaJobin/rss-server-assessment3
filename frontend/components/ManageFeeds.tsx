@@ -7,7 +7,7 @@ import type { FeedSource } from "@/types/feedSource";
 import styles from "./ManageFeeds.module.css";
 
 // Lets a visitor add or remove the RSS feed sources this server pulls
-// from. Backed by the Assessment 2 API — reads and writes go to the
+// from. Backed by the RSS Server API — reads and writes go to the
 // live database instead of localStorage.
 export default function ManageFeeds() {
   const [sources, setSources] = useState<FeedSource[]>([]);
@@ -88,7 +88,7 @@ export default function ManageFeeds() {
       <h2 id="manage-feeds-heading">Manage feeds</h2>
       <p className={styles.description}>
         Add or remove the feed sources this server pulls posts from. Backed
-        by the Assessment 2 API — changes are saved to the database.
+        by the RSS Server API — changes are saved to the database.
       </p>
 
       {loading ? (

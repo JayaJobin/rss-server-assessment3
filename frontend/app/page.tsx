@@ -28,7 +28,7 @@ export default async function HomePage() {
                 an admin creates and categorises posts here, and the server
                 sends them out to RSS clients such as the LMS, which simply
                 display what they receive. Posts and feed sources shown
-                here are now served live by the Assessment 2 backend.
+                here are now served live by the RSS Server backend.
               </p>
               <div className={styles.heroActions}>
                 <Link href="/feeds" className="btn btn-primary">

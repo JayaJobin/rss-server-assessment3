@@ -106,7 +106,7 @@ export default function RssClientPage() {
         <h1>Feed received from the RSS Server</h1>
         <p>
           This page acts as an RSS Client: it fetches{" "}
-          <code>{feedUrl}</code> directly from the Assessment 2 backend
+          <code>{feedUrl}</code> directly from the RSS Server backend
           and parses the raw RSS 2.0 XML in the browser, independent of the
           admin &quot;Feeds&quot; page. Categories below are loaded live from{" "}
           <code>/api/posts</code>, so a new category appears automatically

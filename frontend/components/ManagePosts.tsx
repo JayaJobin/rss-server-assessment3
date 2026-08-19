@@ -93,7 +93,7 @@ export default function ManagePosts() {
     <section className={`card ${styles.panel}`} aria-labelledby="manage-posts-heading">
       <h2 id="manage-posts-heading">Manage posts</h2>
       <p className={styles.description}>
-        Add or remove posts directly through the Assessment 2 API. Changes
+        Add or remove posts directly through the RSS Server API. Changes
         are saved to the database and appear immediately on the Feeds and
         RSS Client pages.
       </p>

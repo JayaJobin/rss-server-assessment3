@@ -22,7 +22,7 @@ export default async function FeedsPage() {
         <p className="eyebrow">Live content</p>
         <h1>Posts published on this server</h1>
         <p>
-          This list is fetched live from the Assessment 2 backend,
+          This list is fetched live from the RSS Server backend,
           representing the posts an admin has created and categorised on
           this server, ready to be sent to RSS clients. Filter by category,
           expand a card for a preview, or open a post for the full write-up.
