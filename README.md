@@ -4,9 +4,10 @@ A containerised RSS Server backend built with Next.js, Sequelize, and SQLite, in
 
 ## Repository
 
-This is the dedicated repository for **Assessment 2**, kept separate from the Assessment 1 frontend repository per the tutor's advice to use one repository per assessment.
+This is the dedicated repository for **Assessment 3**, kept separate from the Assessment 1 and Assessment 2 repositories per the tutor's advice to use one repository per assessment.
 
-- **Assessment 2 (this repo):** https://github.com/JayaJobin/rss-server-assessment2
+- **Assessment 3 (this repo):** https://github.com/JayaJobin/rss-server-assessment3
+- **Assessment 2:** https://github.com/JayaJobin/rss-server-assessment2
 - **Assessment 1:** https://github.com/JayaJobin/rss-server-frontend
 
 ## Architecture
